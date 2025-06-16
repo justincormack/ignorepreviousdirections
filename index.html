@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subscribe to Ignore Previous Directions</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      color: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      max-width: 400px;
+      width: 100%;
+      padding: 2rem;
+      box-sizing: border-box;
+      border: 2px solid #e63946; /* red accent */
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      text-align: center;
+      color: #e63946; /* red accent */
+    }
+
+    h2 {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      font-weight: normal;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    input[type="email"] {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 0.75rem;
+      background: #e63946; /* red accent */
+      color: #ffffff;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background: #d62828;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    .social-links {
+      margin-top: 1.5rem;
+      text-align: center;
+    }
+
+    .social-links a {
+      margin: 0 0.5rem;
+      color: #e63946;
+      text-decoration: none;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .social-links a:hover {
+      text-decoration: underline;
+    }
+
+    .social-links img {
+      width: 16px;
+      height: 16px;
+      margin-right: 0.25rem;
+    }
+
+    a {
+      color: #000000;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Ignore Previous Directions</h1>
+    <h2>Justin Cormack's Newsletter</h2>
+    <form
+      action="https://buttondown.com/api/emails/embed-subscribe/justincormack"
+      method="post"
+      target="popupwindow"
+      onsubmit="window.open('https://buttondown.com/justincormack', 'popupwindow')"
+      class="embeddable-buttondown-form"
+    >
+      <label for="bd-email">Enter your email</label>
+      <input type="email" name="email" id="bd-email" required />
+      <input type="submit" value="Subscribe" />
+      <p>
+        <a href="https://buttondown.com/refer/justincormack" target="_blank">Powered by Buttondown.</a>
+      </p>
+    </form>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/justincormack/" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" />LinkedIn
+      </a>
+      <a href="https://bsky.app/profile/justincormack.bsky.social" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/bluesky.svg" alt="Bluesky" />Bluesky
+      </a>
+      <a href="https://github.com/justincormack" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" />GitHub
+      </a>
+    </div>
+  </div>
+</body>
+</html>
+
