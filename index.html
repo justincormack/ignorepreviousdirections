@@ -10,18 +10,31 @@
       font-family: Helvetica, Arial, sans-serif;
       background: #ffffff;
       color: #000000;
+      padding: 2rem 1rem;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
-      align-items: center;
-      height: 100vh;
     }
 
-    .container {
-      max-width: 400px;
+    .main-container {
+      max-width: 800px;
       width: 100%;
+    }
+
+    .signup-container {
+      max-width: 400px;
+      margin: 0 auto 3rem auto;
       padding: 2rem;
       box-sizing: border-box;
       border: 2px solid #e63946; /* red accent */
+    }
+
+    .archive-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 2rem;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
     }
 
     h1 {
@@ -101,36 +114,89 @@
       color: #000000;
       text-decoration: underline;
     }
+
+    .archive-title {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      color: #e63946;
+    }
+
+    .newsletter-item {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .newsletter-item:last-child {
+      border-bottom: none;
+    }
+
+    .newsletter-description {
+      margin-bottom: 0.5rem;
+      line-height: 1.4;
+    }
+
+    .newsletter-link {
+      color: #e63946;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .newsletter-link:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Ignore Previous Directions</h1>
-    <h2>Justin Cormack's Newsletter</h2>
-    <form
-      action="https://buttondown.com/api/emails/embed-subscribe/justincormack"
-      method="post"
-      target="popupwindow"
-      onsubmit="window.open('https://buttondown.com/justincormack', 'popupwindow')"
-      class="embeddable-buttondown-form"
-    >
-      <label for="bd-email">Enter your email</label>
-      <input type="email" name="email" id="bd-email" required />
-      <input type="submit" value="Subscribe" />
-      <p>
-        <a href="https://buttondown.com/refer/justincormack" target="_blank">Powered by Buttondown.</a>
-      </p>
-    </form>
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/justincormack/" target="_blank">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" />LinkedIn
-      </a>
-      <a href="https://bsky.app/profile/justincormack.bsky.social" target="_blank">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/bluesky.svg" alt="Bluesky" />Bluesky
-      </a>
-      <a href="https://github.com/justincormack" target="_blank">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" />GitHub
-      </a>
+  <div class="main-container">
+    <div class="signup-container">
+      <h1>Ignore Previous Directions</h1>
+      <h2>Justin Cormack's Newsletter</h2>
+      <form
+        action="https://buttondown.com/api/emails/embed-subscribe/justincormack"
+        method="post"
+        target="popupwindow"
+        onsubmit="window.open('https://buttondown.com/justincormack', 'popupwindow')"
+        class="embeddable-buttondown-form"
+      >
+        <label for="bd-email">Enter your email</label>
+        <input type="email" name="email" id="bd-email" required />
+        <input type="submit" value="Subscribe" />
+        <p>
+          <a href="https://buttondown.com/refer/justincormack" target="_blank">Powered by Buttondown.</a>
+        </p>
+      </form>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/justincormack/" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" />LinkedIn
+        </a>
+        <a href="https://bsky.app/profile/justincormack.bsky.social" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/bluesky.svg" alt="Bluesky" />Bluesky
+        </a>
+        <a href="https://github.com/justincormack" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" />GitHub
+        </a>
+      </div>
+    </div>
+
+    <div class="archive-container">
+      <h3 class="archive-title">Newsletter Archive</h3>
+      
+      <div class="newsletter-item">
+        <div class="newsletter-description">A short history of documentation driven development, starting from Wang in 1975</div>
+        <a href="#https://buttondown.com/justincormack/archive/ignore-previous-directions-3/" class="newsletter-link">Read Newsletter #3 →</a>
+      </div>
+
+      <div class="newsletter-item">
+        <div class="newsletter-description">Open Source Founders Summit in Paris; catching up with Rod Johnson and his new agent framework</div>
+        <a href="https://buttondown.com/justincormack/archive/ignore-previous-directions-number-2/" class="newsletter-link">Read Newsletter #2 →</a>
+      </div>
+
+      <div class="newsletter-item">
+        <div class="newsletter-description">Introduction to the newsletter, reading list, catching up with Ayoub Fandi and talking about GRC</div>
+        <a href="#" class="newsletter-link">Read Newsletter #1 →</a>
+      </div>
     </div>
   </div>
 </body>
